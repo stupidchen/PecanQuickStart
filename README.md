@@ -1,3 +1,3 @@
 # PecanQuickStart
 
-A project base based on *pecan* framework.
+A project base based on *pecan* framework and *pbr*.

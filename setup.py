@@ -1,22 +1,13 @@
 # -*- coding: utf-8 -*-
+from setuptools import setup
+
 try:
-    from setuptools import setup, find_packages
+    import multiprocessing
 except ImportError:
-    from ez_setup import use_setuptools
-    use_setuptools()
-    from setuptools import setup, find_packages
+    pass
 
 setup(
-    name='pecanquickstart',
-    version='0.1',
-    description='',
-    author='',
-    author_email='',
-    install_requires=[
-        "pecan",
-    ],
-    test_suite='pecanquickstart',
-    zip_safe=False,
-    include_package_data=True,
-    packages=find_packages(exclude=['ez_setup'])
+    setup_requires=['pbr'],
+    pbr=True,
+    test_suite='pecanquickstart.test'
 )
